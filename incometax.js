@@ -9,11 +9,29 @@
 
 console.log('usage: node incometax.js <grossIncome>')
 
-function runProgram(){
+function runCommandLineProgram(){
 	var grossIncome = process.argv[2]
 	var netIncome = calculateNetIncome(grossIncome)
-	console.log("Your net income is: ")
-	console.log(netIncome)
+	var outputString = 'Your net income is: ' + netIncome.toFixed(2)
+	console.log(outputString)
+}
+
+function runProgramOldschoolJavascriptStyle(){
+	document.getElementById("income_tax_input").addEventListener("input", function(eventObject){
+    	var grossIncome = eventObject.target.value
+		var netIncome = calculateNetIncome(grossIncome)
+		var outputString = 'Your net income is: ' + netIncome.toFixed(2)
+		document.getElementById('output').innerHTML = outputString	
+	})	
+}
+
+function runProgram(){
+	$('#income_tax_input').on('input', function(eventObject){
+		var grossIncome = eventObject.target.value
+		var netIncome = calculateNetIncome(grossIncome)
+		var outputString = 'Your net income is: ' + netIncome.toFixed(2)
+		$('#output').text(outputString)
+	})	
 }
 
 function calculateNetIncome(grossAmount){
@@ -108,3 +126,4 @@ runProgram()
 
 // Your net income is:
 // 44587.962
+

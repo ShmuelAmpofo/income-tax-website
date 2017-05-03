@@ -1,0 +1,24 @@
+{
+  "name": "income_tax",
+  "version": "1.0.0",
+  "description": "amazing tax website, it will blow your socks off",
+  "main": "incometax.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/melvinroest/income-tax-website.git"
+  },
+  "keywords": [
+    "tax",
+    "fun",
+    "money"
+  ],
+  "author": "Melvin Roest",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/melvinroest/income-tax-website/issues"
+  },
+  "homepage": "https://github.com/melvinroest/income-tax-website#readme"
+}
